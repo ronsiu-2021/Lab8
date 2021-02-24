@@ -153,15 +153,12 @@ describe('Party Horn Tests', () => {
   });
 
   it('Show error when the number for the volume textbox input is outside of the given range', () => {
+    // For number greater than 100
     cy.get('#volume-number').clear().type('200');
     cy.get('#honk-btn').click();
     cy.get('input:invalid').should('have.length', 1);
-
+    // For number less than 0
     cy.get('#volume-number').clear().type('-1');
-    cy.get('#honk-btn').click();
-    cy.get('input:invalid').should('have.length', 1);
-
-    cy.get('#volume-number').clear().type('50');
     cy.get('#honk-btn').click();
     cy.get('input:invalid').should('have.length', 1);
   });
