@@ -7,7 +7,7 @@ body {
   font-size: 20px;
   height: 95vh;
   justify-items: center;
-  width: 98%;
+  width : 98vw;
 }
 
 fieldset {
@@ -29,14 +29,14 @@ main {
   height: 100%;
   justify-items: center;
   max-height: 600px;
-  max-width: 500px;
+  max-width : 50vw;
   width: 100%;
 }
 
 #audio-selection {
   align-items: center;
   display: grid;
-  grid-template-areas: "air car";
+  grid-template-areas: "air car party";
   justify-items: center;
 }
 
@@ -62,7 +62,7 @@ main {
   width: 100%;
 }
 
-#radio-air-horn-container {
+#radio-air-horn-container, #radio-car-horn-container {
   padding-right: 30px;
 }
 
@@ -84,12 +84,13 @@ main {
 }
 
 #volume-image {
-  justify-self: center;
   justify-self: flex-start;
   padding-right: 20px;
-  width: 40px;
+  max-width    : 40px;
+  width        : 100%;
 }
 
 #volume-slider {
   grid-area: slider;
+  width: 80%;
 }
